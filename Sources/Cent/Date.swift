@@ -16,7 +16,7 @@ public extension Date {
     /// - parameter month:
     /// - parameter day:
     /// - returns: Date
-    public static func from(year: Int, month: Int, day: Int) -> Date? {
+    static func from(year: Int, month: Int, day: Int) -> Date? {
         let c = DateComponents(calendar: nil, timeZone: nil, era: nil, year: year, month: month, day: day)
         let gregorian = Calendar(identifier: Calendar.Identifier.gregorian)
 
@@ -27,7 +27,7 @@ public extension Date {
     ///
     /// - parameter unix: timestamp
     /// - returns: Date
-    public static func from(unix: Double) -> Date {
+    static func from(unix: Double) -> Date {
         return Date(timeIntervalSince1970: unix)
     }
 
@@ -36,7 +36,7 @@ public extension Date {
     /// - parameter dateStr: String version of the date
     /// - parameter format: By default it is year month day
     /// - returns: Date
-    public static func parse(dateStr: String, format: String = "yyyy-MM-dd") -> Date {
+    static func parse(dateStr: String, format: String = "yyyy-MM-dd") -> Date {
         let dateFmt = DateFormatter()
         dateFmt.timeZone = NSTimeZone.default
         dateFmt.dateFormat = format
@@ -49,7 +49,7 @@ public extension Date {
     ///
     /// - parameter date:
     /// - returns: Double
-    public static func unix(date: Date = Date()) -> Double {
+    static func unix(date: Date = Date()) -> Double {
        return date.timeIntervalSince1970 as Double
     }
 }

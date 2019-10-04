@@ -10,13 +10,13 @@ import Foundation
 
 public extension String {
 
-    public var length: Int {
+    var length: Int {
         get {
             return self.count
         }
     }
 
-    public var camelCase: String {
+    var camelCase: String {
         get {
             return self.deburr().words().reduceWithIndex(initial: "") { (result, index, word) -> String in
                 let lowered = word.lowercased()
@@ -25,7 +25,7 @@ public extension String {
         }
     }
 
-    public var kebabCase: String {
+    var kebabCase: String {
         get {
             return self.deburr().words().reduceWithIndex(initial: "", combine: { (result, index, word) -> String in
                 return result + (index > 0 ? "-" : "") + word.lowercased()
@@ -33,7 +33,7 @@ public extension String {
         }
     }
 
-    public var snakeCase: String {
+    var snakeCase: String {
         get {
             return self.deburr().words().reduceWithIndex(initial: "", combine: { (result, index, word) -> String in
                 return result + (index > 0 ? "_" : "") + word.lowercased()
@@ -41,7 +41,7 @@ public extension String {
         }
     }
 
-    public var startCase: String {
+    var startCase: String {
         get {
             return self.deburr().words().reduceWithIndex(initial: "", combine: { (result, index, word) -> String in
                 let padding = (index > 0) ? " " : ""
@@ -54,8 +54,8 @@ public extension String {
     ///
     /// - parameter index: Index for which the character is returned
     /// - returns: Character at index i
-    public subscript(index: Int) -> Character? {
-        if let char = Array(self.characters).get(index: index) {
+    subscript(index: Int) -> Character? {
+        if let char = Array(self).get(index: index) {
             return char
         }
         return .none
@@ -65,7 +65,7 @@ public extension String {
     ///
     /// - parameter i: Index for which the character is returned
     /// - returns: Character at index i
-    public subscript(pattern: String) -> String? {
+    subscript(pattern: String) -> String? {
         if let range = Range(Regex(pattern).rangeOfFirstMatch(testStr: self)) {
             return self[range]
         }
@@ -76,27 +76,27 @@ public extension String {
     ///
     /// - parameter range: The range from which to start and end the substring
     /// - returns: Substring
-    public subscript(range: Range<Int>) -> String {
+    subscript(range: Range<Int>) -> String {
         let start = self.index(startIndex, offsetBy: range.lowerBound)
         let end = self.index(startIndex, offsetBy: range.upperBound)
-        return self.substring(with: start..<end)
+        return String(self[start..<end])
     }
 
     /// Get substring using subscript notation and by passing a range
     ///
     /// - parameter range: The range from which to start and end the substring
     /// - returns: Substring
-    public subscript(range: CountableClosedRange<Int>) -> String {
+    subscript(range: CountableClosedRange<Int>) -> String {
         let start = self.index(startIndex, offsetBy: range.lowerBound)
         let end = self.index(startIndex, offsetBy: range.upperBound + 1)
-        return self.substring(with: start..<end)
+        return String(self[start..<end])
     }
 
     /// Get the start index of string
     ///
     /// - parameter str: String to get index of
     /// - returns: start index of .None if not found
-    public func indexOf(str: String) -> Int? {
+    func indexOf(str: String) -> Int? {
         return self.indexOfRegex(pattern: Regex.escapeStr(str: str))
     }
 
@@ -104,7 +104,7 @@ public extension String {
     ///
     /// - parameter pattern: Regex pattern to get index of
     /// - returns: start index of .None if not found
-    public func indexOfRegex(pattern: String) -> Int? {
+    func indexOfRegex(pattern: String) -> Int? {
         if let range = Range(Regex(pattern).rangeOfFirstMatch(testStr: self)) {
             return range.lowerBound
         }
@@ -115,28 +115,28 @@ public extension String {
     ///
     /// - parameter delimiter: Character to delimit
     /// - returns: Array of strings after spliting
-    public func split(delimiter: Character) -> [String] {
+    func split(delimiter: Character) -> [String] {
         return self.components(separatedBy: String(delimiter))
     }
 
     /// Remove leading whitespace characters
     ///
     /// - returns: String without leading whitespace
-    public func lstrip() -> String {
+    func lstrip() -> String {
         return self["[^\\s]+.*$"]!
     }
 
     /// Remove trailing whitespace characters
     ///
     /// - returns: String without trailing whitespace
-    public func rstrip() -> String {
+    func rstrip() -> String {
         return self["^.*[^\\s]+"]!
     }
 
     /// Remove leading and trailing whitespace characters
     ///
     /// - returns: String without leading or trailing whitespace
-    public func strip() -> String {
+    func strip() -> String {
         return self.trimmingCharacters(in: .whitespaces)
     }
 
@@ -152,7 +152,7 @@ public extension String {
         let matches = wordRegex.matches(in: self, options: [], range: wordRange)
         let words = matches.map { (result: NSTextCheckingResult) -> String in
             if let range = self.range(from: result.range) {
-                return self.substring(with: range)
+                return String(self[range])
             } else {
                 return ""
             }
@@ -188,7 +188,7 @@ public extension Character {
     /// Get int representation of character
     ///
     /// - returns: UInt32 that represents the given character
-    public var ord: UInt32 {
+    var ord: UInt32 {
         get {
             let desc = self.description
             return desc.unicodeScalars[desc.unicodeScalars.startIndex].value
@@ -198,7 +198,7 @@ public extension Character {
     /// Convert character to string
     ///
     /// - returns: String representation of character
-    public var description: String {
+    var description: String {
         get {
             return String(self)
         }

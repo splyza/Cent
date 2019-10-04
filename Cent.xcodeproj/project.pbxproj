@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4192B9C723470582007281C1 /* AutoBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192B9C32346F999007281C1 /* AutoBind.swift */; };
+		4192B9C823470582007281C1 /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192B9C22346F999007281C1 /* AutoCurry.swift */; };
+		4192B9C923470582007281C1 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192B9C12346F999007281C1 /* Dollar.swift */; };
 		OBJ_34 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Package.swift */; };
 		OBJ_46 /* CentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* CentTests.swift */; };
@@ -34,9 +37,6 @@
 		OBJ_63 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Regex.swift */; };
 		OBJ_64 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* String.swift */; };
 		OBJ_66 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Dollar::Dollar::Product" /* Dollar.framework */; };
-		OBJ_72 /* AutoBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* AutoBind.swift */; };
-		OBJ_73 /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* AutoCurry.swift */; };
-		OBJ_74 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Dollar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,22 +71,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4192B9C12346F999007281C1 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
+		4192B9C22346F999007281C1 /* AutoCurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCurry.swift; sourceTree = "<group>"; };
+		4192B9C32346F999007281C1 /* AutoBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBind.swift; sourceTree = "<group>"; };
 		"Cent::Cent::Product" /* Cent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Cent::CentTests::Product" /* CentTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Cent::CentTests::Product" /* CentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Dollar::Dollar::Product" /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		OBJ_11 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		OBJ_14 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Cent/Dictionary.swift; sourceTree = "<group>"; };
+		OBJ_11 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Cent/Int.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Cent/Range.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Cent/Regex.swift; sourceTree = "<group>"; };
+		OBJ_14 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = Cent/String.swift; sourceTree = "<group>"; };
 		OBJ_17 /* CentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentTests.swift; sourceTree = "<group>"; };
-		OBJ_21 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ankur/Documents/Personal/DollarAndCent/Cent/.build/checkouts/Dollar--1394126711884879759/Package.swift"; sourceTree = "<group>"; };
-		OBJ_22 /* AutoBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBind.swift; sourceTree = "<group>"; };
-		OBJ_23 /* AutoCurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCurry.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = ../../Dollar/Package.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		OBJ_9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		OBJ_8 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Cent/Array.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Cent/Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_21 /* Package.swift */,
-				OBJ_22 /* AutoBind.swift */,
-				OBJ_23 /* AutoCurry.swift */,
-				OBJ_24 /* Dollar.swift */,
+				4192B9C32346F999007281C1 /* AutoBind.swift */,
+				4192B9C22346F999007281C1 /* AutoCurry.swift */,
+				4192B9C12346F999007281C1 /* Dollar.swift */,
 			);
 			name = "Dollar 7.1.0";
-			path = ".build/checkouts/Dollar--1394126711884879759/Sources";
+			path = .build/checkouts/Dollar/Sources;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_25 /* Products */ = {
@@ -284,6 +284,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
@@ -344,9 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_72 /* AutoBind.swift in Sources */,
-				OBJ_73 /* AutoCurry.swift in Sources */,
-				OBJ_74 /* Dollar.swift in Sources */,
+				4192B9C723470582007281C1 /* AutoBind.swift in Sources */,
+				4192B9C823470582007281C1 /* AutoCurry.swift in Sources */,
+				4192B9C923470582007281C1 /* Dollar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +395,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
@@ -403,7 +405,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -412,7 +414,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -421,7 +423,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -430,7 +432,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -450,6 +452,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -457,6 +460,7 @@
 		OBJ_43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +479,7 @@
 		OBJ_44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +512,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Cent;
 			};
 			name = Debug;
@@ -529,7 +534,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Cent;
 			};
 			name = Release;
@@ -551,7 +556,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Dollar;
 			};
 			name = Debug;
@@ -573,7 +578,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Dollar;
 			};
 			name = Release;

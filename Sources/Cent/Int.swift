@@ -14,14 +14,14 @@ public extension Int {
     /// Invoke a callback n times
     ///
     /// - parameter callback: The function to invoke that accepts the index
-    public func times(callback: @escaping (Int) -> ()) {
+    func times(callback: @escaping (Int) -> ()) {
         (0..<self).forEach(callback)
     }
 
     /// Invoke a callback n times
     ///
     /// - parameter function: The function to invoke
-    public func times(function: @escaping () -> ()) {
+    func times(function: @escaping () -> ()) {
         self.times { (index: Int) -> () in
             function()
         }
@@ -31,7 +31,7 @@ public extension Int {
     /// Check if it is even
     ///
     /// - returns: Bool whether int is even
-    public var isEven: Bool {
+    var isEven: Bool {
         get {
             return self % 2 == 0
         }
@@ -40,7 +40,7 @@ public extension Int {
     /// Check if it is odd
     ///
     /// - returns: Bool whether int is odd
-    public var isOdd: Bool {
+    var isOdd: Bool {
         get {
             return self % 2 == 1
         }
@@ -49,7 +49,7 @@ public extension Int {
     /// Get ASCII character from integer
     ///
     /// - returns: Character represented for the given integer
-    public var char: Character {
+    var char: Character {
         get {
             return Character(UnicodeScalar(self)!)
         }
@@ -58,7 +58,7 @@ public extension Int {
     /// Splits the int into array of digits
     ///
     /// - returns: Bool whether int is odd
-    public func digits() -> [Int] {
+    func digits() -> [Int] {
         var digits: [Int] = []
         var selfCopy = self
         while selfCopy > 0 {
@@ -71,14 +71,14 @@ public extension Int {
     /// Get the next int
     ///
     /// - returns: next int
-    public func next() -> Int {
+    func next() -> Int {
         return self + 1
     }
 
     /// Get the previous int
     ///
     /// - returns: previous int
-    public func prev() -> Int {
+    func prev() -> Int {
         return self - 1
     }
 
@@ -86,7 +86,7 @@ public extension Int {
     ///
     /// - parameter limit: the max value to iterate upto
     /// - parameter callback: to invoke
-    public func upTo(limit: Int, callback: @escaping () -> ()) {
+    func upTo(limit: Int, callback: @escaping () -> ()) {
         (self...limit).forEach { _ in
             callback()
         }
@@ -96,7 +96,7 @@ public extension Int {
     ///
     /// - parameter limit: the max value to iterate upto
     /// - parameter callback: to invoke
-    public func upTo(limit: Int, callback: @escaping (Int) -> ()) {
+    func upTo(limit: Int, callback: @escaping (Int) -> ()) {
         (self...limit).forEach(callback)
     }
 
@@ -104,7 +104,7 @@ public extension Int {
     ///
     /// - parameter limit: the min value to iterate upto
     /// - parameter callback: to invoke
-    public func downTo(limit: Int, callback: () -> ()) {
+    func downTo(limit: Int, callback: () -> ()) {
         var selfCopy = self
         while selfCopy >= limit {
             callback()
@@ -116,7 +116,7 @@ public extension Int {
     ///
     /// - parameter limit: the min value to iterate upto
     /// - parameter callback: to invoke
-    public func downTo(limit: Int, callback: (Int) -> ()) {
+    func downTo(limit: Int, callback: (Int) -> ()) {
         var selfCopy = self
         while selfCopy >= limit {
             callback(selfCopy)
@@ -128,7 +128,7 @@ public extension Int {
     ///
     /// - parameter number:
     /// - returns: Greatest common denominator
-    public func gcd(number: Int) -> Int {
+    func gcd(number: Int) -> Int {
         return Dollar.gcd(self, number)
     }
 
@@ -136,21 +136,21 @@ public extension Int {
     ///
     /// - parameter number:
     /// - returns: Least common multiple
-    public func lcm(number: Int) -> Int {
+    func lcm(number: Int) -> Int {
         return Dollar.lcm(self, number)
     }
 
     /// Returns random number from 0 upto but not including value of integer
     ///
     /// - returns: Random number
-    public func random() -> Int {
+    func random() -> Int {
         return Dollar.random(self)
     }
 
     /// Returns Factorial of integer
     ///
     /// - returns: factorial
-    public func factorial() -> Int {
+    func factorial() -> Int {
         return Dollar.factorial(self)
     }
 
@@ -158,7 +158,7 @@ public extension Int {
     ///
     /// - parameter interval: to check in
     /// - returns: true if it is in interval otherwise false
-    public func isIn(interval: ClosedRange<Int>) -> Bool {
+    func isIn(interval: ClosedRange<Int>) -> Bool {
         return Dollar.it(self, isIn: Range(interval))
     }
 
@@ -166,7 +166,7 @@ public extension Int {
     ///
     /// - parameter interval: to check in
     /// - returns: true if it is in interval otherwise false
-    public func isIn(interval: Range<Int>) -> Bool {
+    func isIn(interval: Range<Int>) -> Bool {
         return Dollar.it(self, isIn: interval)
     }
 

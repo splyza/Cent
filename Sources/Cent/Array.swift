@@ -207,7 +207,7 @@ public extension Array {
     /// Checks if the array has one or more elements.
     ///
     /// - returns: true if the array is not empty, or false if it is empty.
-    public var isNotEmpty: Bool {
+    var isNotEmpty: Bool {
         get {
             return !self.isEmpty
         }
